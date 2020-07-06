@@ -26,6 +26,7 @@ header{
     background-size: cover;
     background-position: center;
     background-image: url('../img/capa.png');
+    font-weight: 300;
 }
 
 header .logo{
@@ -60,6 +61,7 @@ header li a{
 }
 
 .chamada1 h2{
+    font-weight: 300;
     font-size: 40px;
     color: white;
 }
