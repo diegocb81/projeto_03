@@ -121,7 +121,7 @@ header nav.desktop-menu li a{
 
 section.sessao1{
 	width: 100%;
-	background-color: #472562;
+	background-color: #06183c;
 	padding:0 2%;
 	height: 400px;
 }
@@ -163,7 +163,7 @@ section.sessao1 .container{
 }
 
 .btn1-texto{
-	background-color: #FF703D;
+	background-color: #3686be;
 	width: 165px;
 	height: 44px;
 	font-size: 13px;
@@ -198,7 +198,7 @@ section.sessao1 .container{
 }
 
 .sessao2 h2{
-	color: #472663;
+	color: #06183c;
 	font-weight: 300;
 }
 
@@ -224,7 +224,7 @@ section.sessao1 .container{
 	float: left;
 	width: 50%;
 	padding:140px 0 90px 0;
-	background: #835FA7;
+	background: #3686be;
 }
 
 .wraper-part1{
@@ -243,6 +243,7 @@ section.sessao1 .container{
 	font-size: 15px;
 	line-height: 35px;
 	margin-top:10px;
+	text-align: justify;
 }
 
 .part2{
@@ -285,7 +286,7 @@ section.sessao1 .container{
 	float: left;
 	width: 40px;
 	height:40px;
-	background-image: url('../img/actor1.png');
+	background-image: url('../img/autor.png');
 	background-size: 100% 100%;
 	border-radius: 20px;
 	background-color: transparent;
@@ -295,6 +296,7 @@ section.sessao1 .container{
 	float: left;
 	width: 100%;
 	margin-top:10px;
+	text-align: justify;
 }
 
 .texto-autor p{
@@ -322,7 +324,7 @@ section.sessao1 .container{
 /* Aqui estou começando a sessão de número 4! */
 
 section.sessao4{
-	background-color: #472563;
+	background-color: #06183c;
 	padding:100px 0;
 }
 
@@ -343,6 +345,7 @@ section.sessao4{
 	font-weight: 300;
 	max-width: 400px;
 	padding-right: 10px;
+	text-align: justify;
 }
 
 .form form{
@@ -370,7 +373,7 @@ section.sessao4{
 
 .form form input[type=submit]{
 	border: 0;
-	background-color: #FF703D;
+	background-color: #3686be;
 	width: 165px;
 	height: 44px;
 	font-size: 13px;
@@ -415,6 +418,12 @@ section.sessao4{
 	height: 100%;
 	background: white;
 	border:5px solid rgb(200,200,200);
+}
+
+.map iframe{
+	position: absolute;
+	width: 100%;
+	height: 100%;
 }
 
 /***/
@@ -558,6 +567,13 @@ section.sessao4 .container{
 	width: 100%;
 	height: 100%;
 	padding-top:0;
+}
+
+.map iframe{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
 }
 
 }
