@@ -436,14 +436,15 @@ footer{
 	color: white;
 }
 
-footer p:nth-of-type(1){
+footer p{
 	float: left;
 	font-size: 14px;
 }
 
-footer p:nth-of-type(2){
+footer a{
 	float: right;
 	font-size: 14px;
+	color: white;
 }
 
 @media screen and (max-width: 830px){
@@ -599,11 +600,11 @@ section.sessao4 .container{
 		text-align: center;
 	}
 
-	footer p:nth-of-type(1){
+	footer p{
 	    float: none;
 	}
 
-	footer p:nth-of-type(2){
+	footer a{
 		float: none;
 		margin-top:8px;
 	}
