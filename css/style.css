@@ -78,8 +78,8 @@ header .logo{
 	position: relative;
 	top:-5px;
 	float: left;
-	width: 160px;
-	height: 40px;
+	width: 200px;
+	height: 50px;
 	background-image: url('../img/logo_dast.png');
 	background-size: contain;
 	background-position: center;
