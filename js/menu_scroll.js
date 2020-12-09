@@ -4,5 +4,7 @@ $(function(){
         var offSetTop = $(href).offset().top;
 
         $('html,body').animate({'scrollTop':offSetTop});
+
+        return false;
     })
 })
