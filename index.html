@@ -33,7 +33,6 @@
             </ul>
         </nav>
 
-
         <div class="clear"></div><!--clear-->
 
         <div class="chamada1">
@@ -67,7 +66,7 @@
 <section id="sobre" class="sessao2">
     <div class="container">
         <h2>Tecnologia de alta performance</h2>
-        <p>Desenvolvimento de sistemas, sites, lojas virtuais, aplicativos e marketing digital, utilizando tecnologia de ponta, buscando entender as necessidades de cada negócio e utilizar estratégias e soluções digitais para alavancar o crescimento das empresas.
+        <p>Desenvolvimento de sistemas, sites, lojas virtuais, aplicativos e marketing digital, utilizando tecnologia de ponta, buscando entender as necessidades de cada negócio e aplicar estratégias e soluções digitais para alavancar o crescimento da sua empresa.
         </p>
         <img src="img/mockup.jpg" />
     </div><!--container-->
@@ -78,7 +77,7 @@
     <div class="part1">
         <div class="wraper-part1">
             <h2>Missão</h2>
-            <p>Oferecer soluções digitais personalizadas e dinâmicas, a um valor justo, conectando empresas e clientes através da tecnologia, valorizando o respeito, a ética e o comprometimento entre clientes e colaboradores. </p>
+            <p>Oferecer soluções digitais personalizadas e dinâmicas, conectando empresas e clientes através da tecnologia, valorizando o respeito, a ética e o comprometimento. </p>
         </div>
     </div><!--part1-->
 
@@ -140,10 +139,12 @@
             <h2>Entre em contato</h2>
             <p>Gostaria de obter mais informações? Preencha o formulário e estaremos entrando em contato na maior brevidade possível.</p>
 
-            <form>
-                <input type="text" name="nome" placeholder="Nome*">
-                <input type="text" name="email" placeholder="E-mail*">
-                <textarea name="mensagem" placeholder="Mensagem*"></textarea>
+            <form method="POST" action="form.php">
+                <input required type="hidden" name="nome do formulário" value="Formulário 1">
+                <input required type="text" name="nome" placeholder="Nome*">
+                <input required type="email" name="email" placeholder="E-mail*">
+                <input required type="text" name="telefone" placeholder="Telefone">
+                <textarea required name="mensagem" placeholder="Mensagem*"></textarea>
                 <div class="clear"></div>
                 <div><input type="submit" value="Enviar"></div>
             </form>
@@ -171,8 +172,51 @@
     </div><!--container-->
 </footer>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEWsYw9Ffk2oEvVoqGamtEPHOT1iRGOYg"></script>
-<script src="js/functions.js"></script>
 <script src="js/jquery.js"></script>
+<script src="js/jquery.ajaxform.js"></script>
+<script>
+    $(function () {
+
+        $('form').submit(function () {
+
+            if (formularioPreenchido()) {
+                var form = $('form');
+                $('form').ajaxSubmit({
+                    beforeSubmit: function () {
+                        form.find('input[type=submit]').attr('disabled', 'true');
+                        form.find('input[type=submit]').animate({ 'opacity': '0.4' })
+                        form.find('input[type=submit]').attr('value', 'Carregando');
+                    },
+                    success: function (data) {
+                        //Aqui você pode inserir uma div, por exemplo.
+                        //Qualquer mensagem de sucesso, após o formulario ter sido enviado.
+                        alert('Formulário foi enviado com sucesso!');
+                        form.find('input[type=submit]').removeAttr('disabled');
+                        form.find('input[type=submit]').animate({ 'opacity': '1' })
+                        form.find('input[type=submit]').attr('value', 'Enviar');
+                        form[0].reset();
+                    }
+                });
+            } else {
+                alert("Campos Vázios não são permitidos!");
+            }
+            return false;
+        })
+
+        function formularioPreenchido() {
+            var nome = $('[name=nome]').val();
+            var email = $('[name=email]').val();
+            var telefone = $('[name=telefone]').val();
+            var mensagem = $('[name=mensagem]').val();
+            if (nome === '' || email === '' || telefone === '' || mensagem === '') {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    })
+</script>
+<script src="js/functions.js"></script>
 <script src="js/menu_responsivo.js"></script>
 <script src="js/menu_scroll.js"></script>
 <script src="js/slider_equipe.js"></script>
