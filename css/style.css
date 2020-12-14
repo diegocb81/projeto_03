@@ -74,14 +74,15 @@ nav.mobile-menu ul li:hover{
 nav.mobile-menu ul li a{
 	color: black;
 	text-decoration: none;
+	display: block;
 }
 
 header .logo{
 	position: relative;
-	top:-5px;
+	top:-10px;
 	float: left;
-	width: 175px;
-	height: 37px;
+	width: 160px;
+	height: 40px;
 	background-image: url('../img/logo_dast.png');
 	background-size: contain;
 	background-position: center;
