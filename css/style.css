@@ -335,7 +335,7 @@ section.sessao1 .container{
 	background-color: rgb(200,200,200);
 }
 
-/* Aqui estou começando a sessão de número 4! */
+/*Começo da sessão de número 4!*/
 
 section.sessao4{
 	background-color: #06183c;
@@ -366,7 +366,8 @@ section.sessao4{
 	margin-top:15px;
 }
 
-.form form input[type=text]{
+.form form input[type=text],
+.form form input[type=email]{
 	width: 90%;
 	max-width: 480px;
 	margin-top:8px;
@@ -449,12 +450,12 @@ footer{
 	color: white;
 }
 
-footer p{
+footer p:nth-of-type(1){
 	float: left;
 	font-size: 14px;
 }
 
-footer a{
+footer p:nth-of-type(2){
 	float: right;
 	font-size: 14px;
 	color: white;
@@ -613,11 +614,11 @@ section.sessao4 .container{
 		text-align: center;
 	}
 
-	footer p{
+	footer p:nth-of-type(1){
 	    float: none;
 	}
 
-	footer a{
+	footer p:nth-of-type(2){
 		float: none;
 		margin-top:8px;
 	}
