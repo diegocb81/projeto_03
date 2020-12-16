@@ -2,8 +2,8 @@
 	class Mail{
 
 		public $opt,$mailer;
-		public $email = 'teste@dankicode.com';//Trocar e-mail aqui!
-		public $senha = 'curso123456';//Trocar senha aqui!
+		public $email = 'contato@dast.com';//Trocar e-mail aqui!
+		public $senha = 'senha123456';//Trocar senha aqui!
 
 		public function __construct(Array $parametros){
 			include('classes/phpmailer/PHPMailerAutoload.php');
@@ -30,7 +30,7 @@
 
 			$body = '';
 			foreach ($parametros as $key => $value) {
-				$body.=ucfirst($key).": ".utf8_decode($value);
+				$body.=ucfirst($key).": ".$value;
 				$body.="<hr>";
 			}
 	

@@ -151,11 +151,11 @@
             <p>Gostaria de obter mais informações? Preencha o formulário e estaremos entrando em contato na maior brevidade possível.</p>
 
             <form method="POST" action="form.php">
-                <input required type="hidden" name="nome do formulário" value="Formulário 1">
-                <input required type="text" name="nome" placeholder="Nome*">
-                <input required type="email" name="email" placeholder="E-mail*">
-                <input required type="text" name="telefone" placeholder="Telefone*">
-                <textarea required name="mensagem" placeholder="Mensagem*"></textarea>
+                <input type="hidden" name="nome do formulário" value="Formulário 1">
+                <input type="text" name="nome" placeholder="Nome*">
+                <input type="email" name="email" placeholder="E-mail*">
+                <input type="text" name="telefone" placeholder="Telefone*">
+                <textarea name="mensagem" placeholder="Mensagem*"></textarea>
                 <div class="clear"></div>
                 <div><input type="submit" value="Enviar"></div>
             </form>
@@ -188,17 +188,17 @@
 <script>
     $(function () {
 
-        $('form').submit(function () {
+        $('form').submit(function(){
 
-            if (formularioPreenchido()) {
+            if (formularioPreenchido()){
                 var form = $('form');
                 $('form').ajaxSubmit({
-                    beforeSubmit: function () {
+                    beforeSubmit: function(){
                         form.find('input[type=submit]').attr('disabled', 'true');
                         form.find('input[type=submit]').animate({ 'opacity': '0.4' })
                         form.find('input[type=submit]').attr('value', 'Carregando');
                     },
-                    success: function (data) {
+                    success: function(data){
                         alert('Formulário foi enviado com sucesso!');
                         form.find('input[type=submit]').removeAttr('disabled');
                         form.find('input[type=submit]').animate({ 'opacity': '1' })
@@ -206,20 +206,20 @@
                         form[0].reset();
                     }
                 });
-            } else {
-                alert("Campos Vázios não são permitidos!");
+            }else{
+                alert("Campos vazios não são permitidos!");
             }
             return false;
         })
 
-        function formularioPreenchido() {
+        function formularioPreenchido(){
             var nome = $('[name=nome]').val();
             var email = $('[name=email]').val();
             var telefone = $('[name=telefone]').val();
             var mensagem = $('[name=mensagem]').val();
-            if (nome === '' || email === '' || telefone === '' || mensagem === '') {
+            if (nome === '' || email === '' || telefone === '' || mensagem === ''){
                 return false;
-            } else {
+            }else{
                 return true;
             }
         }
