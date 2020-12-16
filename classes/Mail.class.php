@@ -1,18 +1,16 @@
 <?php
-
-
 	class Mail{
 
 		public $opt,$mailer;
-		public $email = 'SEUEMAIL';//Trocar e-mail aqui!
-		public $senha = 'SUASENHA';//Trocar senha aqui!
+		public $email = 'teste@dankicode.com';//Trocar e-mail aqui!
+		public $senha = 'curso123456';//Trocar senha aqui!
 
 		public function __construct(Array $parametros){
 			include('classes/phpmailer/PHPMailerAutoload.php');
 			$this->mailer = new PHPMailer();
 
 			$this->mailer->IsSMTP();
-			$this->mailer->Host = 'SEU SERVER SMTP'; //SERVIDOR SMTP DA HOSPEDAGEM
+			$this->mailer->Host = 'server2.rapidcloud.com.br'; //SERVIDOR SMTP DA HOSPEDAGEM
 			$this->mailer->Port = 465; //PORTA DO SMTP
 			$this->mailer->SMTPDebug = 0;
 			$this->mailer->SMTPAuth = true;
@@ -23,7 +21,6 @@
 			$this->mailer->IsHTML(true);
 			$this->mailer->SingleTo = true;
 
-
 			$this->mailer->From = $this->email;
 			$this->mailer->FromName = $this->email;
 
@@ -33,7 +30,7 @@
 
 			$body = '';
 			foreach ($parametros as $key => $value) {
-				$body.=ucfirst($key).": ".$value;
+				$body.=ucfirst($key).": ".utf8_decode($value);
 				$body.="<hr>";
 			}
 	
@@ -53,7 +50,6 @@
 				return false;
 			}
 		}
-
 
 	}
 
