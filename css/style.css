@@ -452,6 +452,16 @@ section.diferenciais > h2{
 	color: #06183c;
 }
 
+.box-diferenciais{
+	margin-top: 40px;
+}
+
+.box-single-diferencial{
+	float: left;
+	width: 33.3%;
+	padding: 0 10px;
+}
+
 /***/
 
 
