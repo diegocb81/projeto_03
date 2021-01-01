@@ -445,7 +445,7 @@ section.diferenciais{
 	padding: 30px 0;
 }
 
-section.diferenciais > .container h2{
+section.diferenciais > .container > h2{
 	text-align: center;
 	font-size: 23px;
 	font-weight: 300;
@@ -460,6 +460,17 @@ section.diferenciais > .container h2{
 	float: left;
 	width: 33.3%;
 	padding: 0 10px;
+}
+
+.box-single-diferencial h2{
+	font-size: 55px;
+	color: #06183c;
+	text-align: center;
+}
+
+.box-single-diferencial p{
+	font-size: 15px;
+	color: rgb(100,100,100);
 }
 
 /***/
