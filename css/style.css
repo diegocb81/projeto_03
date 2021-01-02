@@ -618,6 +618,10 @@ section.sessao4 .container{
 	padding-top:0;
 }
 
+section.diferenciais{
+	background: rgb(220,220,220);
+}
+
 .map iframe{
 	position: absolute;
 	width: 100%;
