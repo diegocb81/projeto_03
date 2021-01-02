@@ -442,12 +442,12 @@ section.sessao4{
 }
 
 section.diferenciais{
-	padding: 30px 0;
+	padding: 40px 0;
 }
 
 section.diferenciais > .container > h2{
 	text-align: center;
-	font-size: 23px;
+	font-size: 27px;
 	font-weight: 300;
 	color: #06183c;
 }
@@ -623,6 +623,21 @@ section.sessao4 .container{
 	width: 100%;
 	height: 100%;
 	left: 0;
+}
+
+.box-diferenciais{
+	margin-top: 0;
+}
+
+.box-single-diferencial{
+	width: 100%;
+	margin-top: 12px;
+	text-align: center;
+}
+
+.box-single-diferencial p{
+	display: inline-block;
+	max-width: 400px;
 }
 
 }
